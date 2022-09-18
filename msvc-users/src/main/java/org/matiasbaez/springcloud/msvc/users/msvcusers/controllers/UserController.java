@@ -43,7 +43,7 @@ public class UserController {
             userObj.setEmail(user.getEmail());
             userObj.setPassword(user.getPassword());
 
-            return ResponseEntity.status(HttpStatus.ACCEPTED).body(service.save(userObj));
+            return ResponseEntity.status(HttpStatus.OK).body(service.save(userObj));
         }
 
         return ResponseEntity.notFound().build();
