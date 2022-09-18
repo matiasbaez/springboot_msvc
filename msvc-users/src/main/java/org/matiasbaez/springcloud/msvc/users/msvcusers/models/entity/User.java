@@ -1,6 +1,7 @@
 package org.matiasbaez.springcloud.msvc.users.msvcusers.models.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "users")
@@ -10,11 +11,15 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
     private String name;
 
+    @NotEmpty
+    @Email
     @Column(unique = true)
     private String email;
 
+    @NotBlank
     private String password;
 
     public Long getId() {

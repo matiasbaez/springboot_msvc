@@ -8,7 +8,6 @@
         <outputRelativeToContentRoot value="true" />
         <module name="msvc-courses" />
         <module name="msvc-users" />
-        <module name="msvc-categories" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
